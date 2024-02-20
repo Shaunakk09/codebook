@@ -17,6 +17,7 @@ export const ProductsList = () => {
   useTitle("Explore eBooks Collection");
  
   useEffect(() => {
+    
     async function fetchProducts(){
       try{
         const data = await getProductList(searchTerm);
@@ -27,7 +28,7 @@ export const ProductsList = () => {
     }
     fetchProducts();
   }, [searchTerm]); //eslint-disable-line
-
+   
   return (
     <main>
         <section className="my-5">
